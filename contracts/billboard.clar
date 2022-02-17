@@ -24,6 +24,7 @@
         (unwrap! (stx-transfer? cur-price tx-sender (as-contract tx-sender)) (err ERR_STX_TRANSFER))
 
         ;; update the billboard's message
+        ;; #[allow(unchecked_data)]
         (var-set billboard-message message)
 
         ;; update the price of setting a message
