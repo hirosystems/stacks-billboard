@@ -33,6 +33,16 @@ If the local DevNet is running, the React frontend will display the message `Hel
 
 ![Billboard demo](./public/billboard-demo.png)
 
+## Updating the message
+
+To verify that the billboard is updating based on the state of the deployed contract, the script `update-message.js` can be used:
+
+```sh
+node update-message.js "My new message" -k <secret key>
+```
+
+Fill in `<secret key>` in the command with the kley for one of the accounts defined in settings/Devnet.toml.
+
 ## Dependencies
 
 This project has the following dependencies:

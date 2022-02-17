@@ -9,7 +9,7 @@ const Footer: React.FC<{}> = () => {
   return (
     <StyledFooter>
       <Text>
-        Made with <span tw="mr-2">❤️</span> by pgray
+        Made with <span tw="mr-2">❤️</span> by <a href="https://hiro.so">Hiro Systems</a>
       </Text>
     </StyledFooter>
   );
