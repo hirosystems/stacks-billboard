@@ -23,13 +23,13 @@
         ;; pay the contract
         (unwrap! (stx-transfer? cur-price tx-sender (as-contract tx-sender)) (err ERR_STX_TRANSFER))
 
-	;; update the billboard's message
+        ;; update the billboard's message
         (var-set billboard-message message)
 
         ;; update the price of setting a message
         (var-set price new-price)
 
         ;; return the updated price
-	(ok new-price)
+        (ok new-price)
     )
 )
