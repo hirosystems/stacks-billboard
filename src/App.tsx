@@ -1,8 +1,8 @@
 import * as React from "react";
 
-import Billboard from "@components/billboard";
-import Docs from "@components/docs";
-import Layout from "@components/layout";
+import Billboard from "./components/billboard";
+import Docs from "./components/docs";
+import Layout from "./components/layout";
 
 function App() {
   return (

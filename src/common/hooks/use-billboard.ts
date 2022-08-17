@@ -2,8 +2,8 @@ import { useCallback, useEffect, useState } from "react";
 import { cvToString, hexToCV } from "@stacks/transactions";
 import useInterval from "@use-it/interval";
 
-import { useBillboardContract } from "@common/hooks/use-billboard-contract";
-import { useSmartContractApi } from "@common/hooks/use-smart-contract-api";
+import { useBillboardContract } from "./use-billboard-contract";
+import { useSmartContractApi } from "./use-smart-contract-api";
 
 export const useBillboard = () => {
   const client = useSmartContractApi();

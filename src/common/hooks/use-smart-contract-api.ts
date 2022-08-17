@@ -3,7 +3,7 @@ import {
   SmartContractsApi,
 } from "@stacks/blockchain-api-client";
 
-import { useNetwork } from "@common/hooks/use-network";
+import { useNetwork } from "./use-network";
 
 export const useSmartContractApi = () => {
   const network = useNetwork();
