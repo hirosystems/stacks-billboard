@@ -1,8 +1,8 @@
 import * as React from "react";
 import tw from "twin.macro";
 
-import Text from "@components/text";
-import { useBillboardContract } from "@common/hooks/use-billboard-contract";
+import Text from "./text";
+import { useBillboardContract } from "../common/hooks/use-billboard-contract";
 
 const StyledArticle = tw.article`prose flex flex-col mx-auto`;
 

@@ -1,7 +1,7 @@
 import * as React from "react";
 import tw from "twin.macro";
 
-import Text from "@components/text";
+import Text from "./text";
 
 const StyledHeader = tw.header`relative flex flex-wrap items-center justify-between px-2 py-3 mb-3`;
 
