@@ -4,14 +4,14 @@ import {
   Chain,
   Account,
   types,
-} from "https://deno.land/x/clarinet@v0.14.0/index.ts";
-import { assertEquals } from "https://deno.land/std@0.90.0/testing/asserts.ts";
+} from "https://deno.land/x/clarinet@v1.0.2/index.ts";
+import { assertEquals } from "https://deno.land/std@0.159.0/testing/asserts.ts";
 
 Clarinet.test({
   name: 'Ensure that the initial message is "Hello, world!"',
-  async fn(chain: Chain, accounts: Map<string, Account>) {
-    let deployer = accounts.get("deployer")!;
-    let message = chain.callReadOnlyFn(
+  fn(chain: Chain, accounts: Map<string, Account>) {
+    const deployer = accounts.get("deployer")!;
+    const message = chain.callReadOnlyFn(
       "billboard",
       "get-message",
       [],
@@ -23,9 +23,9 @@ Clarinet.test({
 
 Clarinet.test({
   name: "Ensure that the message updates",
-  async fn(chain: Chain, accounts: Map<string, Account>) {
-    let wallet1 = accounts.get("wallet_1")!;
-    let block = chain.mineBlock([
+  fn(chain: Chain, accounts: Map<string, Account>) {
+    const wallet1 = accounts.get("wallet_1")!;
+    const block = chain.mineBlock([
       Tx.contractCall(
         "billboard",
         "set-message",
@@ -37,7 +37,7 @@ Clarinet.test({
     assertEquals(block.height, 2);
     block.receipts[0].result.expectOk();
 
-    let message = chain.callReadOnlyFn(
+    const message = chain.callReadOnlyFn(
       "billboard",
       "get-message",
       [],
@@ -49,8 +49,8 @@ Clarinet.test({
 
 Clarinet.test({
   name: "Ensure that the price increments by 10",
-  async fn(chain: Chain, accounts: Map<string, Account>) {
-    let wallet1 = accounts.get("wallet_1")!;
+  fn(chain: Chain, accounts: Map<string, Account>) {
+    const wallet1 = accounts.get("wallet_1")!;
     let block = chain.mineBlock([
       Tx.contractCall(
         "billboard",

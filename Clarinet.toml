@@ -4,9 +4,9 @@ authors = []
 description = ""
 telemetry = false
 requirements = []
+
 [contracts.billboard]
 path = "contracts/billboard.clar"
-depends_on = []
 
 [repl]
 costs_version = 2
